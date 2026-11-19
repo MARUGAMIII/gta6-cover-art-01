@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vice Cover Studio — GTA 6-style Cover Art Maker</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<main class="app">
+  <section class="controls" aria-label="Cover controls">
+    <h1>VICE <span>COVER</span><br>STUDIO</h1>
+    <p class="tagline">YOUR PHOTO &middot; GTA 6-STYLE POSTER &middot; PNG EXPORT</p>
+
+    <h2>1 &middot; PHOTOS</h2>
+    <p class="hint">Load up to three photos. Drag the cover to move a photo, click a panel to pick it. Or fill every panel with the hero photo.</p>
+    <div id="slots"></div>
+
+    <h2>2 &middot; LAYOUT</h2>
+    <div class="seg" id="layoutSeg" role="group" aria-label="Layout"></div>
+
+    <h2>3 &middot; COLOUR GRADE</h2>
+    <div class="swatches" id="themeSeg" role="group" aria-label="Colour grade"></div>
+
+    <h2>4 &middot; WORDS</h2>
+    <label for="title">TITLE (BIG LETTERS)</label>
+    <input id="title" type="text" maxlength="30" value="BOULEVARD QUEEN">
+    <label for="place">PLACE BADGE</label>
+    <input id="place" type="text" maxlength="20" value="VICE CITY">
+    <label for="tagline">TAGLINE</label>
+    <input id="tagline" type="text" maxlength="40" value="SUNSET HEIST">
+
+    <h2>5 &middot; EXPORT SIZE</h2>
+    <div class="seg" id="sizeSeg" role="group" aria-label="Export size"></div>
+
+    <button id="export" class="primary" type="button">EXPORT PNG</button>
+    <p id="status" role="status"></p>
+    <p class="hint">Photos stay on your machine &mdash; nothing is uploaded. Fonts are open-licensed files shipped with the app. No Rockstar logo, artwork or font is used.</p>
+  </section>
+
+  <section class="stage" aria-label="Cover preview">
+    <canvas id="cover" width="1080" height="1080" aria-label="The cover preview"></canvas>
+    <p class="size-note" id="sizeNote">1080 &times; 1080 &middot; LIVE PREVIEW</p>
+  </section>
+</main>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
